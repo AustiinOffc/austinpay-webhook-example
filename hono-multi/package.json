@@ -1,0 +1,17 @@
+{
+  "name": "austinpay-webhook-hono-multi",
+  "version": "1.0.0",
+  "description": "AustinPay webhook receiver - Hono (runs on Node/Bun/Deno/Cloudflare)",
+  "scripts": {
+    "dev:node": "tsx src/index.ts",
+    "dev:bun": "bun run src/index.ts",
+    "dev:deno": "deno run --allow-net --allow-env --allow-read src/index.ts"
+  },
+  "dependencies": {
+    "hono": "^4.6.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0"
+  }
+}
