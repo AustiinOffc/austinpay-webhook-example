@@ -1,0 +1,20 @@
+name = "austinpay-webhook-worker"
+main = "src/index.ts"
+compatibility_date = "2026-07-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Webhook Secret (gunakan secrets, JANGAN taruh di [vars] untuk production):
+#   wrangler secret put WEBHOOK_SECRET
+# [vars]
+# WEBHOOK_SECRET = "whsec_ganti_dengan_secret_anda_dari_dashboard"
+
+# D1 Database (untuk menyimpan riwayat webhook)
+[[d1_databases]]
+binding = "DB"
+database_name = "austinpay-webhooks"
+database_id = "<ISI_DATABASE_ID_DARI_DASHBOARD>"
+
+# KV Namespace (dedup supaya retry dari AustinPay tidak diproses dua kali)
+[[kv_namespaces]]
+binding = "WEBHOOK_KV"
+id = "<ISI_KV_ID_DARI_DASHBOARD>"
