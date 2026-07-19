@@ -1,0 +1,10 @@
+{
+  "name": "austinpay-webhook-bun-hono",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "bun run src/index.ts"
+  },
+  "dependencies": {
+    "hono": "^4.6.0"
+  }
+}
