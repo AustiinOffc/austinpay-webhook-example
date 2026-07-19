@@ -1,0 +1,16 @@
+{
+  "name": "austinpay-webhook-worker",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:init": "wrangler d1 execute austinpay-webhooks --file=./src/schema.sql",
+    "db:init:remote": "wrangler d1 execute austinpay-webhooks --file=./src/schema.sql --remote"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240701.0",
+    "typescript": "^5.5.0",
+    "wrangler": "^3.60.0"
+  }
+}
